@@ -193,6 +193,9 @@ void MainWindow::initModelFirst()
 
     MyDelegate *delegate = new MyDelegate(ui->tableView);
     ui->tableView->setItemDelegate(delegate);
+
+    QSqlRelationalDelegate *rd = new QSqlRelationalDelegate(ui->tableView);
+    ui->tableView->setItemDelegateForColumn(1, rd);
 }
 
 //-------------------------------------------------------------------
